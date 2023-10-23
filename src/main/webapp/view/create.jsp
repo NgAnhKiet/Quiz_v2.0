@@ -1,10 +1,11 @@
 <%--
   Created by IntelliJ IDEA.
-  User: ADMIN
-  Date: 10/19/2023
-  Time: 9:38 AM
+  User: Admin
+  Date: 23/10/2023
+  Time: 3:28 SA
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <title>Quizz-login</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -28,8 +29,13 @@
 </head>
 <body>
 <div class="form-container">
-    <h1>Login</h1>
-    <form action="login" method="post">
+    <h1>Register</h1>
+    <form action="/users" method="post">
+        <div class="mb-3">
+            <label for="display-name" class="form-label">Name:</label>
+            <input type="text" id="display-name" name="displayName" class="form-control">
+        </div>
+
         <div class="mb-3">
             <label for="email" class="form-label">Email:</label>
             <input type="email" id="email" name="email" class="form-control" required>
@@ -41,6 +47,11 @@
         </div>
 
         <div class="mb-3">
+            <label for="confirm-password" class="form-label">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirmPassword" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
             <label for="role" class="form-label">Role:</label>
             <select id="role" name="role" class="form-control">
                 <option value="student">Student</option>
@@ -49,11 +60,11 @@
         </div>
 
         <div class="d-grid">
-            <input type="submit" value="Login" class="btn btn-primary">
+            <input type="submit" value="Register" class="btn btn-primary">
         </div>
     </form>
     <div class="text-center mt-3">
-        <p>Already have an account? <a href="register.jsp">Register here</a> </p>
+        <p>Already have an account? <a href="login.jsp">Login here</a> </p>
     </div>
 </div>
 

@@ -5,9 +5,9 @@ public class Teacher {
     private String name;
     private String email;
     private String password;
-    private boolean role;
+    private String role;
 
-    public Teacher(String name, String email, String password, boolean role) {
+    public Teacher(String name, String email, String password, String role) {
         this.name = name;
         this.email = email;
         this.password = password;
@@ -16,7 +16,7 @@ public class Teacher {
 
     public Teacher() {}
 
-    public Teacher(int id, String name, String email,String password, boolean role) {
+    public Teacher(int id, String name, String email,String password, String role) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -56,11 +56,11 @@ public class Teacher {
         this.password = password;
     }
 
-    public boolean isRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(boolean role) {
+    public void setRole(String role) {
         this.role = role;
     }
 }
