@@ -1,35 +1,60 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: tuancd
-  Date: 24/10/2023
-  Time: 23:51
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Đăng nhập</title>
-  <link rel="stylesheet" type="text/css" href="../login/style.css">
-  <audio id="myAudio" autoplay loop>
-    <source src="/music/cute-music-26476.mp3" type="audio/mp3">
-  </audio>
+  <meta charset="UTF-8">
+  <title>Quizz-login</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 40px;
+      background: #ffbdf4;
+    }
+
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .form-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-  <form id="login-form">
-    <h2>Đăng nhập</h2>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+<div class="form-container">
+  <h1>Login</h1>
+  <form action="/home/home.jsp" method="post">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" id="email" name="email" class="form-control" required>
     </div>
-    <div class="form-group">
-      <label for="password">Mật khẩu</label>
-      <input type="password" id="password" name="password" required>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password:</label>
+      <input type="password" id="password" name="password" class="form-control" required>
     </div>
-    <button type="submit" id="submit-btn">Đăng nhập</button>
+
+    <div class="mb-3">
+      <label for="role" class="form-label">Role:</label>
+      <select id="role" name="role" class="form-control">
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+      </select>
+    </div>
+
+    <div class="d-grid">
+      <input type="submit" value="Login" class="btn btn-primary">
+    </div>
   </form>
+
+  <div class="text-center mt-3">
+    <p>Already have an account? <a href="/sign-up/sign-up.jsp">Register here</a> </p>
+  </div>
 </div>
+
+<script src="js/bootstrap.min.js"></script>
 </body>
-<script src="../login/script.js"></script>
 </html>

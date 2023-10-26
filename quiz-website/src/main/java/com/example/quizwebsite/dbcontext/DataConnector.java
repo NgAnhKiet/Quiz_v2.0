@@ -22,18 +22,7 @@ public class DataConnector {
         String dbPassword = properties.getProperty("db.password");
 
         Class.forName("com.mysql.cj.jdbc.Driver");
-        return DriverManager.getConnection(dbUrl,dbUser,dbPassword);
-    }
+        return DriverManager.getConnection(dbUrl, dbUser, dbPassword);
 
-    public static void closeConnection(Connection connection, PreparedStatement statement, ResultSet resultSet) throws SQLException {
-        if (resultSet != null) {
-            resultSet.close();
-        }
-        if (statement != null) {
-            statement.close();
-        }
-        if (connection != null) {
-            connection.close();
-        }
     }
 }
